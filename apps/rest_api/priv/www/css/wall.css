@@ -42,7 +42,6 @@ div.slogan {
 	width: 1200px;
 	top: 30px;
 	min-height: 740px;
-    margin-bottom: 20px;
 	background: url(/img/background.png) no-repeat center top;
 }
 
@@ -79,7 +78,7 @@ div.content_center {
 	margin: 0 auto;
 	bottom: 10px;
 	width: 480px;
-	margin-top: 20px;
+	padding-top: 20px;
 }
 
 #footer_content .img_link {
