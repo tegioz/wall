@@ -1,0 +1,10 @@
+{application,rest_api,
+             [{description,"rest_api"},
+              {vsn,"1"},
+              {modules,[rest_api,rest_api_app,rest_api_msg,rest_api_msgs,
+                        rest_api_static,rest_api_sup]},
+              {registered,[]},
+              {applications,[kernel,stdlib,inets,crypto,mochiweb,webmachine,
+                             mongodb,db_api]},
+              {mod,{rest_api_app,[]}},
+              {env,[]}]}.

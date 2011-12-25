@@ -1,0 +1,248 @@
+body {
+	background: #0db3f8 url(/img/grid.png) repeat-y center;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	min-height:900px;
+	min-width:1024px;	
+	font-size: 16px;
+	color: black;
+}
+
+div.logo {
+	margin:0 auto;
+	margin-top: -20px;
+	width:  282px;
+	background: url(/img/logo.png) no-repeat center;
+	height: 52px;
+}
+
+div.bubbles {
+	background: url(/img/bocadillos.png) no-repeat;
+	position:relative;
+	width: 1200px;
+	margin: 0 auto;
+	height: 200px;
+	bottom: -50px;
+}
+
+div.slogan {
+	font-family: "Waiting for the Sunrise", Helvetica, Arial;
+	color: #000;
+	font-size: 32px;
+	text-align: center;
+	line-height: 32px;
+	margin-top: 10px;
+}
+
+#background_images {
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	top: 30px;
+	min-height: 740px;
+	background: url(/img/background.png) no-repeat center top;
+}
+
+div.content_center {
+	position: relative;
+	background-color: #fff;
+	width: 500px;
+	min-height: 730px;
+	margin:0 auto;
+	margin-top: -20px;
+	margin-bottom: 40px;
+	-moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+	/* Inner shadow */
+	-moz-box-shadow:inset 0 0 10px #000000;
+   	-webkit-box-shadow:inset 0 0 10px #000000;
+   	box-shadow:inset 0 0 10px #000000;
+   	/* Drop shadow */
+   	-moz-box-shadow: 0 0 10px #000000;
+  	-webkit-box-shadow: 0 0 10px #000000;
+  	box-shadow: 0 0 10px #000000;
+}
+
+#wall-content {
+	padding: 10px;
+}
+
+#footer_content {
+	font-family: "Waiting for the Sunrise", Helvetica, Arial;
+	color: #000;
+	font-size: 32px;
+	text-align: center;
+	line-height: 34px;
+	margin: 0 auto;
+	bottom: 10px;
+	width: 480px;
+	margin-top: 20px;
+}
+
+#footer_content .img_link {
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+#footer_content .text_finish {
+	font-family: "Overlock", Helvetica, Arial;
+	font-size: 16px;
+	line-height: inherit;
+	margin-top: 30px;
+}
+
+#footer_content .text_finish a:hover, a:link, a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+#footer_content .trademarks {
+	font-family: "Overlock", Helvetica, Arial;
+	color: #4e4e4e;
+	font-size: 11px;
+	line-height: 11px;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+
+img.ribbon_github {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+
+#clouds {
+    position: absolute;
+    width: 600px;
+    margin: 0 auto;
+    background: url(/img/clouds.png) no-repeat center;
+    height: 113px;
+    left: 50%;
+    margin-left: -300px;
+    top: 731px;
+	z-index: 1;
+}
+
+.msg {
+    background: white;
+    width: 453px;   
+    padding:10px;
+    border:1px dashed #1468c6;
+    margin-left:2px;
+    margin-bottom: 10px;
+}
+
+.msg-input {
+    border: 1px solid #b8b8b8;
+	background-color: rgb(184, 184, 184);
+	background-color: rgba(184, 184, 184, 0.3);
+    resize: none;
+    width: 440px;
+    height: 55px;
+    font-family: "Antic", Helvetica, Arial;
+	font-size: 24px;
+	color: #000;
+	padding: 5px;
+}
+
+.msg-input[readonly] {
+    background: white;
+    border: 1px solid #fff;
+    resize: none;
+    width: 440px;
+    height: 55px;
+    font-family: "Antic", Helvetica, Arial;
+	font-size: 24px;
+	color: #000;
+	padding: 5px;
+	outline: none;
+}
+
+#new-msg-input {
+	width:460px;
+	margin-top: 10px;
+	margin-left: 5px;
+	border: 1px solid #acacac;
+	color: #4e4e4e;
+	font-family: "Marvel", Helvetica, Arial;
+	font-size: 20px;
+	padding: 5px;
+	outline: none;
+}
+
+.new-msg-text {
+	margin-top: 0px;
+	font-family: "Marvel", Helvetica, Arial;
+	font-size: 14px;
+	color: #4e4e4e;
+	margin-left: 5px;
+}
+
+.instructions-text {
+	font-family: "Lato", Helvetica, Arial;
+	font-size: 12px;
+	color: #1468c6;
+	text-align: center;
+	/*border-top: 1px solid #acacac;
+	border-bottom: 1px solid #acacac;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.alert-msg-ok {
+	width:460px;
+	margin-top: 10px;
+	margin-left: 5px;
+	border: 1px solid #117d09;
+	background-color: rgb(17, 125, 9);
+	background-color: rgba(7, 125, 9, 0.2);
+	color: #117d09;
+	font-family: "Lato", Helvetica, Arial;
+	font-size: 18px;
+	padding: 5px;
+}
+
+.alert-msg-error {
+	width:460px;
+	margin-top: 10px;
+	margin-left: 5px;
+	border: 1px solid #d01010;
+	background-color: rgb(208, 16, 16);
+	background-color: rgba(208, 16, 16, 0.2);
+	color: #d01010;
+	font-family: "Lato", Helvetica, Arial;
+	font-size: 18px;
+	padding: 5px;
+}
+
+#msg-user-agent {
+	font-family: "Lato", Helvetica, Arial;
+	font-size: 11px;
+	color: #4e4e4e;
+	margin-left: 7px;
+	margin-right: 7px;
+	margin-top: 5px;
+}
+
+#msg-user-agent .user-agent-title {
+	font-weight: bold;
+}
+
+#msg-user-agent .user-agent-content {
+	font-size: 10px;
+}
+
+#delete-message {
+	background: url(/img/but_close.png) no-repeat center;
+	width: 20px;
+	height: 20px;
+	border: none;
+	position: relative;
+	right: -5px;
+	top: -5px;
+	float: right;
+	cursor: pointer;
+}

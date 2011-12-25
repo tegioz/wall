@@ -1,0 +1,7 @@
+THIS directory shouldn't be exposed to the Internet. It is just used to generate compiled handlebars templates. 
+
+To do it, use this command (you'll need handlebars node app installed):
+
+$ handlebars template*.html -m -f ../js/templates.js
+
+More info about handlebars in: https://github.com/wycats/handlebars.js/

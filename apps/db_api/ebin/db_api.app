@@ -1,0 +1,9 @@
+{application,db_api,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{db_api_app,[]}},
+              {env,[]},
+              {modules,[db_api_app,db_api_pool,db_api_server,db_api_sup,
+                        db_api_sup_pool,db_api_sup_server]}]}.

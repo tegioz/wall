@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PublicWall</title>
+		<meta charset='utf-8'/>
+        <link rel="stylesheet" type="text/css" href="/css/wall.css" />
+        <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/js/json2.js"></script>
+        <script type="text/javascript" src="/js/underscore-min.js"></script>
+        <script type="text/javascript" src="/js/backbone-min.js"></script>
+        <script type="text/javascript" src="/js/handlebars.vm-1.0.0.beta.4.js"></script>
+        <script type="text/javascript" src="/js/templates.js"></script>
+		<link href=' http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+		<link href=' http://fonts.googleapis.com/css?family=Overlock' rel='stylesheet' type='text/css'>
+		<link href=' http://fonts.googleapis.com/css?family=Marvel' rel='stylesheet' type='text/css'>
+		<link href=' http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href=' http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div class="bubbles">
+			<div class="logo"></div>
+			<div class="slogan"><i>"</i> an extremely <b>simple app</b><br>built with <u>really powerful</u> technologies<i>"</i></div>
+		</div>
+        <div id="clouds"></div>
+		<div id="background_images">
+			<div class="content_center">
+				<div id="wall-content">
+                    <div id='new-msg'>
+                        <input id='new-msg-input' placeholder='Your message goes here' type='text' /><br />
+                        <p class='new-msg-text'>Press ENTER to post your message to the wall (max. 160 chars)</p>
+                        <p class='instructions-text'>You can delete any message you want using the symbol in the <b>top right corner</b> of each post
+                        <br /><br />
+                        To modify an already posted message, just <b>double-click</b> on it.<br />Press ENTER when you're done</p>
+                        <p id='alert-msg' hidden='true'>Alert info</p>
+                    </div>
+                    <div id='msgs'></div>
+                </div>
+			</div>
+		</div>
+		<div id="footer_content">
+			This is just a small <b>proof of concept</b> that uses several modern<br />programming technologies.
+			<br /><br />
+			Feel free to <u>download</u> the code from <a href="http://github.com/tegioz/wall" target="_blank"><img class="img_link" src="/img/github.png" /></a> and use it for your own projects.
+			<div class="text_finish">
+				2011 @ Sergio Castaño Arteaga · Contact me at: <a href="mailto:tegioz@gmail.com?subject=publicWall">tegioz <img class="img_link" src="/img/gmail.png" /></a>
+			</div>
+			<div class="trademarks">All trademarks, logos and images used on this web site are the property of their respective owners.</div>
+		</div>
+		<a href="http://github.com/tegioz/wall"><img class="ribbon_github" src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
+        <script type="text/javascript" src="/js/wall.js"></script>
+	</body>
+</html>
