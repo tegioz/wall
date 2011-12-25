@@ -65,7 +65,7 @@ Use this config if want to use NGINX to serve the static content, acting as a re
         server_name  www.your_server_name.com;
         access_log   /var/log/nginx/your_server_name.com.access.log  main;
  
-        location ~ ^/(images|js|css|wall)/  {
+        location ~ ^/(img|js|css|wall)/  {
             root    /YOUR_PATH_OF_INSTALLATION/wall/;
             expires 30d;
         }   
