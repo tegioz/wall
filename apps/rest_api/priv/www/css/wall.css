@@ -114,16 +114,30 @@ img.ribbon_github {
 	border: 0;
 }
 
-#clouds {
+.cloud_left {
     position: absolute;
-    width: 600px;
     margin: 0 auto;
-    background: url(/img/clouds.png) no-repeat center;
-    height: 113px;
+    background: url(/img/cloud_left.png) no-repeat center;
+    width: 49px;
+    height: 55px;
+    top: 760px;
     left: 50%;
-    margin-left: -300px;
-    top: 731px;
-	z-index: 1;
+    margin-left: -298px;
+    z-index: 1;
+    float:left;
+}
+
+.cloud_right {
+    position: absolute;
+    margin: 0 auto;
+    background: url(/img/cloud_right.png) no-repeat center;
+    width: 49px;
+    height: 55px;
+    top: 760px;
+    right: 50%;
+    margin-right: -298px;
+    z-index: 1;
+    float:right;
 }
 
 .msg {
