@@ -41,7 +41,8 @@ div.slogan {
 	margin: 0 auto;
 	width: 1200px;
 	top: 30px;
-	min-height: 760px;
+	min-height: 740px;
+    margin-bottom: 20px;
 	background: url(/img/background.png) no-repeat center top;
 }
 
