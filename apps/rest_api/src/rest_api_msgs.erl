@@ -66,7 +66,7 @@ process_post(ReqData, Ctx) ->
 
 to_json(ReqData, Ctx) ->
     Docs = lists:map(fun(Doc) -> 
-        Doc2 = bson:exclude(['_id'],Doc),
+        Doc2 = bson:exclude(['_id',ip],Doc),
         {bson:fields(Doc2)} 
     end, Ctx#ctx.data),
     {ok, JSONDocs} = json:encode(Docs),

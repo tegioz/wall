@@ -60,7 +60,7 @@ init([]) ->
 handle_call(all, _From, State) ->
     case mongo:do(safe, master, State#state.db_conn, State#state.db, fun() ->
         %mongo:rest(mongo:find(items, {'$query', {}, '$orderby', {order,1}}, {'_id', 1, id, 1, message, 1}))
-        mongo:rest(mongo:find(items, {'$query', {}, '$orderby', {id,1}}, {}, 0, 10))
+        mongo:rest(mongo:find(items, {'$query', {}, '$orderby', {id,-1}}, {}, 0, 10))
     end) of
         {ok, Docs}        -> {reply, {ok, Docs}, State};
         {failure, Reason} -> {reply, {error, Reason}, State}

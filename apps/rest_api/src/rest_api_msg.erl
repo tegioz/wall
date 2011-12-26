@@ -77,7 +77,7 @@ malformed_request(ReqData, Ctx) ->
 
 to_json(ReqData, Ctx) ->
     Doc = Ctx#ctx.data, 
-    Doc2 = bson:exclude(['_id'], Doc),
+    Doc2 = bson:exclude(['_id',ip], Doc),
     {ok, JSONDoc} = json:encode({bson:fields(Doc2)}),
     {JSONDoc, ReqData, Ctx}.
 
