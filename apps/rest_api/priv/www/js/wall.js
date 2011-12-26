@@ -107,15 +107,15 @@ window.MessagesView = Backbone.View.extend({
     },
 
     createMessage: function(e) {
-        if (e.keyCode != 13) return;
+        if (e.keyCode != 13 || this.input.val() == '') return;
         Messages.create({ message: this.input.val() }, {
             success: function() {
                 $("#alert-msg").html("Message created successfully").attr('class','alert-msg-ok');
-                $("#alert-msg").stop().fadeIn("slow").delay(2000).slideUp();
+                $("#alert-msg").fadeIn("slow").delay(2000).slideUp();
             }, 
             error: function() {
                 $("#alert-msg").html("An error ocurred while creating this message").attr('class','alert-msg-error');
-                $("#alert-msg").stop().fadeIn("slow").delay(2000).slideUp();
+                $("#alert-msg").fadeIn("slow").delay(2000).slideUp();
             }
         }); 
         this.input.val("");
