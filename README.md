@@ -1,4 +1,4 @@
-PublicWall
+Wall
 ===
 
 Simple app written using MongoDB, Webmachine (Erlang+MochiWeb), Backbone.js, jQuery and Handlebars
@@ -8,7 +8,7 @@ If you just want to see the app running, visit: http://www.tegioz.com/wall/
 ### Dependencies:
 
   - MongoDB (http://www.mongodb.org/downloads)
-  - ERLANG (http://www.erlang.org/download.html)
+  - Erlang (http://www.erlang.org/download.html)
 
 ### Get the code:
 
@@ -58,7 +58,7 @@ and you're done ;)
 NGINX
 ---
 
-Use this config if want to use NGINX to serve the static content, acting as a reverse proxy to Webmachine RESTful API.
+Use this config if you want to use NGINX to serve the static content, acting as a reverse proxy to Webmachine RESTful API.
 
     server {
         listen       80; 
