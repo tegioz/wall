@@ -12,7 +12,7 @@ If you just want to see the app running, visit: http://www.tegioz.com/wall/
 
 ### Get the code:
 
-    git clone git@github.com:tegioz/wall.git
+    git clone https://github.com/tegioz/wall.git
 
 ### Build:
 
