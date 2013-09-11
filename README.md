@@ -3,7 +3,7 @@ Wall
 
 Simple app written using MongoDB, Webmachine (Erlang+MochiWeb), Backbone.js, jQuery and Handlebars
 
-If you just want to see the app running, visit: http://www.tegioz.com/wall/
+If you just want to see the app running, visit: http://wall.tegioz.com
 
 ### Dependencies:
 
@@ -64,13 +64,9 @@ Use this config if you want to use NGINX to serve the static content, acting as 
         listen       80; 
         server_name  www.your_server_name.com;
         access_log   /var/log/nginx/your_server_name.com.access.log  main;
+        root    /YOUR_PATH_OF_INSTALLATION/wall/apps/rest_api/priv/www/;
  
-        location ~ ^/(img|js|css|wall)/  {
-            root    /YOUR_PATH_OF_INSTALLATION/wall/;
-            expires 30d;
-        }   
- 
-        location / { 
+        location /api { 
             proxy_pass      http://127.0.0.1:8000;
         }   
     }
