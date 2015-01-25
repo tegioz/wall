@@ -1,6 +1,5 @@
-
 -module(rest_api).
--export([start/0, start_link/0, stop/0]).
+-export([start/0, stop/0]).
 
 ensure_started(App) ->
     case application:start(App) of
@@ -10,34 +9,22 @@ ensure_started(App) ->
             ok
     end.
 
-start_link() ->
-    ensure_started(inets),
-    ensure_started(crypto),
-    ensure_started(mochiweb),
-    application:set_env(webmachine, webmachine_logger_module, 
-                        webmachine_logger),
-    ensure_started(webmachine),
-    ensure_started(mongodb),
-    ensure_started(db_api),
-    rest_api_sup:start_link().
-
 start() ->
     ensure_started(inets),
     ensure_started(crypto),
+    ensure_started(syntax_tools),
+    ensure_started(compiler),
+    ensure_started(xmerl),
+    ensure_started(asn1),
+    ensure_started(public_key),
+    ensure_started(ssl),
     ensure_started(mochiweb),
-    application:set_env(webmachine, webmachine_logger_module, 
-                        webmachine_logger),
+    application:set_env(webmachine, webmachine_logger_module, webmachine_logger),
     ensure_started(webmachine),
     ensure_started(mongodb),
     ensure_started(db_api),
-    application:start(rest_api).
+    ensure_started(rest_api),
+    rest_api_sup:start_link().
 
 stop() ->
-    Res = application:stop(rest_api),
-    application:stop(db_api),
-    application:stop(mongodb),
-    application:stop(webmachine),
-    application:stop(mochiweb),
-    application:stop(crypto),
-    application:stop(inets),
-    Res.
+    ok.
