@@ -61,7 +61,7 @@ malformed_request(ReqData, Ctx) ->
     case wrq:method(ReqData) of
         'PUT' ->
             JSONChanges = wrq:req_body(ReqData),
-            {ok, {Changes}} = json:decode(JSONChanges),
+            {ok, {Changes}} = jiffy:decode(JSONChanges),
             Changes2 = [{binary_to_atom(Key, utf8), Value} || {Key, Value} <- Changes],
             UsedKeys = [Key || {Key, _Value} <- Changes2],
             UsedKeysSet = sets:from_list(UsedKeys),
@@ -78,7 +78,7 @@ malformed_request(ReqData, Ctx) ->
 to_json(ReqData, Ctx) ->
     Doc = Ctx#ctx.data, 
     Doc2 = bson:exclude(['_id',ip], Doc),
-    {ok, JSONDoc} = json:encode({bson:fields(Doc2)}),
+    {ok, JSONDoc} = jiffy:encode({bson:fields(Doc2)}),
     {JSONDoc, ReqData, Ctx}.
 
 resource_exists(ReqData, Ctx) ->

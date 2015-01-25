@@ -34,7 +34,7 @@ malformed_request(ReqData, Ctx) ->
     case wrq:method(ReqData) of
         'POST' ->
             JSONChanges = wrq:req_body(ReqData),
-            {ok, {Changes}} = json:decode(JSONChanges),
+            {ok, {Changes}} = jiffy:decode(JSONChanges),
             Changes2 = [{binary_to_atom(Key, utf8), Value} || {Key, Value} <- Changes],
             UsedKeys = [Key || {Key, _Value} <- Changes2],
             UsedKeysSet = sets:from_list(UsedKeys),
@@ -58,7 +58,7 @@ process_post(ReqData, Ctx) ->
     IP = list_to_binary(wrq:peer(ReqData)),
     NewDoc2 = bson:append({'id', ID, 'agent', Agent, 'ip', IP}, NewDoc),
     case db_api_server:save(Ctx#ctx.db, NewDoc2) of
-        {ok, done}       -> {ok, Body} = json:encode({[{'id', ID}, {'agent', Agent}, {'ip', IP}]}),
+        {ok, done}       -> {ok, Body} = jiffy:encode({[{'id', ID}, {'agent', Agent}, {'ip', IP}]}),
                             ReqData2 = wrq:set_resp_body(Body, ReqData),
                             {true, ReqData2, Ctx};
         {error, _Reason} -> {false, ReqData, Ctx}
@@ -69,7 +69,7 @@ to_json(ReqData, Ctx) ->
         Doc2 = bson:exclude(['_id',ip],Doc),
         {bson:fields(Doc2)} 
     end, Ctx#ctx.data),
-    {ok, JSONDocs} = json:encode(Docs),
+    {ok, JSONDocs} = jiffy:encode(Docs),
     {JSONDocs, ReqData, Ctx}.
 
 resource_exists(ReqData, Ctx) ->
