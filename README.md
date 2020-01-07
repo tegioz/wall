@@ -3,8 +3,6 @@ Wall
 
 Simple app written using MongoDB, Webmachine (Erlang+MochiWeb), Backbone.js, jQuery and Handlebars
 
-If you just want to see the app running, visit: http://wall.tegioz.com
-
 ### Dependencies:
 
   - MongoDB (http://www.mongodb.org/downloads)
